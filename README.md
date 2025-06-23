@@ -30,7 +30,7 @@ Test code for sampling rate 0.5% in the 'test_for_rate0.5.py'.
 Fine-tune and test code for sampling rate 0.02% in the 'finetune_and_test_for_rate0.02.py'.
 
 ### Trained Models
-Download the pretrained model from [this link](https://huggingface.com).
+Download the pretrained model from [this link](https://huggingface.co).
 
 ## Results
 

@@ -21,20 +21,17 @@ pip install -r requirements.txt
 The dataset can be downloaded from the following link: [Dataset URL](https://ieee-dataport.org/documents/indoor-radio-map-dataset)
 
 ### Training
-Training code in the 'training.py'.
+Training code is in the 'training.py'.
 
 ### Test code for sampling rate 0.5%
-Test code for sampling rate 0.5% in the 'test_for_rate0.5.py'.
+Test code for sampling rate 0.5% is in the 'test_for_rate0.5.py'.
 
 ### Fine-tune and test code for sampling rate 0.02%
-Fine-tune and test code for sampling rate 0.02% in the 'finetune_and_test_for_rate0.02.py'.
-
-### Trained Models
-Download the pretrained model from [this link](https://huggingface.co).
+Fine-tune and test code for sampling rate 0.02% is in the 'finetune_and_test_for_rate0.02.py'.
 
 ## Results
 
-**SAIPP-Net** achieved the best RMSE esult among all participating teams: 
+**SAIPP-Net** achieved the best RMSE result among all participating teams: 
 - **Task 1 (0.02%)**: 5.99
 - **Task 1 (0.5%)**: 3.32
 - **Task 2 (0.02%)**: 6.08

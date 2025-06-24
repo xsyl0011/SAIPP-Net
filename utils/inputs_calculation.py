@@ -165,7 +165,6 @@ def inputs_calculation(filename, HW):
 
     map_1, map_2, map_3, map_4, map_6, map_10, map_23 = check_line_material_counts(img, int(x_ant), int(y_ant))
     material_maps = np.stack((map_1, map_2, map_3, map_4, map_6, map_10, map_23), axis=0)
-    material_maps = np.clip(material_maps, 0, 5)
 
     material_maps_transposed = np.transpose(material_maps, (1, 2, 0))
     material_maps_resized = cv2.resize(material_maps_transposed, (256, 256), interpolation=cv2.INTER_CUBIC)
@@ -181,7 +180,6 @@ def inputs_calculation(filename, HW):
     path_loss_NLOS_matrix = path_loss_NLOS(distance_matrix)
     path_loss_matrix = np.zeros_like(distance_matrix)
     los_map = map_1 + map_2 + map_3 + map_4 + map_6 + map_10 + map_23
-    los_map = np.clip(los_map, None, 5)
     path_loss_matrix = np.where(los_map == 0, path_loss_LOS_matrix, np.maximum(path_loss_LOS_matrix, path_loss_NLOS_matrix))
     normalized_path_loss_8bit = path_loss_matrix.astype(np.uint8)
 
